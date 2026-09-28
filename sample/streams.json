@@ -1,0 +1,15 @@
+{
+  "budget": 2,
+  "every": 3,
+  "bad_value_code": "E_BAD_VALUE",
+  "empty_code": "E_EMPTY",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "pending": 0, "kept": [], "dropped": 0, "shown": [], "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "put", "value": 10 },
+    { "id": 2, "kind": "put", "value": 20 },
+    { "id": 3, "kind": "put", "value": 30 },
+    { "id": 4, "kind": "show" },
+    { "id": 5, "kind": "put", "value": 40 }
+  ]
+}
