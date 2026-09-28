@@ -1,8 +1,10 @@
-// rate.js：间隔计数与展示（基线：一律给原值与负一）
+// rate.js：间隔计数与展示
 export function bumpOf(pending, every) {
-  return { pending: pending, sampled: false };
+  const next = (pending || 0) + 1;
+  if (next >= every) return { pending: 0, sampled: true };
+  return { pending: next, sampled: false };
 }
 
 export function showOf(kept) {
-  return -1;
+  return kept && kept.length > 0 ? kept.length : -1;
 }
